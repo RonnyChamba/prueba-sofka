@@ -1,27 +1,30 @@
-1)  Crear red, se utilizara para comunicar los servicios, ejecutar:
+1)  Generar el .jar de la dependencia ms-core-dependency, ya que es requerida para los micro ms-core-persona y ms-core-transaction
+
+
+2) Crear red, se utilizara para comunicar los servicios, ejecutar:
 	docker network create shared-network
 
-2) Crear la base de datos : db_assessment_sofka, ejecuta el script BaseDatos
+3) Crear la base de datos : db_assessment_sofka, ejecuta el script BaseDatos
 	
 
-3) Crear el contenedor de MySQL :
+4) Crear el contenedor de MySQL :
 	a) descargar la imagen : docker pull MySQL
 	b) crear contenedor: docker-compose up
 
 
-4) Crear contenedor ms-core-persona:
+5) Crear contenedor ms-core-persona:
 	a) Generar la imagen, reemplazar las credenciales en el archivo application.properties de ser requerido
 	b) Crear contenedor: docker-compose up
 
 
 
-5) Crear contenedor ms-core-transaction
+6) Crear contenedor ms-core-transaction
 	
 	a) Generar la imagen,reemplazar las credenciales en el archivo application.properties de ser requerido
 	b) Crear contenedor: docker-compose up
 
 
 
-6) Links de imágenes
+7) Links de imágenes
 	1) https://hub.docker.com/repository/docker/ronnyrene/ms-core-persona/general
 	2) https://hub.docker.com/repository/docker/ronnyrene/ms-core-transaction/general
