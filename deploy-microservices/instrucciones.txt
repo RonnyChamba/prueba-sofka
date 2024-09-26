@@ -1,4 +1,5 @@
 1)  Generar el .jar de la dependencia ms-core-dependency, ya que esta es requerida para los micro ms-core-persona y ms-core-transaction
+	link repositorio: https://github.com/RonnyChamba/msc-core-dependency
 
 
 2) Crear red, se utilizara para comunicar los servicios, ejecutar:
