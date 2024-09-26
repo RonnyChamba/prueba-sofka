@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+
+  ms-core-transaction:
+    image: ms-core-transaction:1.0
+    container_name:  ms-core-transaction
+    ports:
+      - "8084:8084"
+    volumes:
+      - ./application.properties:/app/application.properties
+    networks:
+      - shared-network
+networks:
+  shared-network:
+    external: true
+
+volumes:
+    todo-mysql-data:
+      external: true

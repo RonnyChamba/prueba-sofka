@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+
+  ms-core-persona:
+    image: ms-core-persona:1.0
+    container_name:  ms-core-persona
+    ports:
+      - "8083:8083"
+    volumes:
+      - ./application.properties:/app/application.properties
+    networks:
+      - shared-network
+networks:
+  shared-network:
+    external: true
+
+volumes:
+    todo-mysql-data:
+      external: true

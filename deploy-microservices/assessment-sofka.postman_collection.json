@@ -1,0 +1,562 @@
+{
+	"info": {
+		"_postman_id": "eac1a03c-df6c-41c5-94ab-d257066010a5",
+		"name": "assessment-sofka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17373384"
+	},
+	"item": [
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "create Customer-1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"${{$randomUUID}}\",\r\n    \"payload\": {\r\n        \"fullName\": \"Jose Lema\",\r\n        \"gender\": \"M\",\r\n        \"age\": 25,\r\n        \"identification\": \"1234567811\",\r\n        \"address\": \"Otavalo sn y principal\",\r\n        \"phone\": \"098254785\",\r\n        \"password\": \"1234\",\r\n        \"status\": \"true\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Customer-2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"${{$randomUUID}}\",\r\n    \"payload\": {\r\n        \"fullName\": \"Marianela Montalvo\",\r\n        \"gender\": \"F\",\r\n        \"age\": 25,\r\n        \"identification\": \"1234567812\",\r\n        \"address\": \"Amazonas y NNUU\",\r\n        \"phone\": \"097548965\",\r\n        \"password\": \"5678\",\r\n        \"status\": \"true\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Customer-3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"${{$randomUUID}}\",\r\n    \"payload\": {\r\n        \"fullName\": \"Juan Usuario\",\r\n        \"gender\": \"F\",\r\n        \"age\": 25,\r\n        \"identification\": \"1234567813\",\r\n        \"address\": \"13 junio y Equinoccial\",\r\n        \"phone\": \"098874587\",\r\n        \"password\": \"1245\",\r\n        \"status\": \"true\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"${{$randomUUID}}\",\r\n    \"payload\": {\r\n        \"identification\": \"123456789\",\r\n        \"dataToUpdate\": {\r\n            \"fullName\": \"Jose Lema update\",\r\n            \"gender\": \"F\",\r\n            \"age\": 18,\r\n            \"address\": \"Otavalo sn y principal\",\r\n            \"phone\": \"098254788\",\r\n            \"password\": \"1245670\",\r\n            \"status\": \"false\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/clientes/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"clientes",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"${{$randomUUID}}\",\r\n    \"payload\":  \"123456781\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/clientes/remove",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"clientes",
+								"remove"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list Customers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/clientes/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"clientes",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "create Account-1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"${{$randomUUID}}\",\r\n    \"payload\": {\r\n        \"accountNumber\": \"478758\",\r\n        \"accountType\": \"Ahorros\",\r\n        \"balance\": 2000,\r\n        \"identificationCustomer\": \"1234567811\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Account-2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"${{$randomUUID}}\",\r\n    \"payload\": {\r\n        \"accountNumber\": \"225487\",\r\n        \"accountType\": \"Corriente\",\r\n        \"balance\": 100,\r\n        \"identificationCustomer\": \"1234567812\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Account-3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"${{$randomUUID}}\",\r\n    \"payload\": {\r\n        \"accountNumber\": \"495878\",\r\n        \"accountType\": \"Ahorros\",\r\n        \"balance\": 0,\r\n        \"identificationCustomer\": \"1234567813\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Account-4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"${{$randomUUID}}\",\r\n    \"payload\": {\r\n        \"accountNumber\": \"496825\",\r\n        \"accountType\": \"Ahorros\",\r\n        \"balance\": 540,\r\n        \"identificationCustomer\": \"1234567812\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Account-5",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"${{$randomUUID}}\",\r\n    \"payload\": {\r\n        \"accountNumber\": \"85545\",\r\n        \"accountType\": \"Corriente\",\r\n        \"balance\": 1000,\r\n        \"identificationCustomer\": \"1234567811\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Account",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"${{$randomUUID}}\",\r\n    \"origin\": \"Postam\",\r\n    \"payload\": {\r\n        \"accountNumber\": \"478758\",\r\n        \"dataToUpdate\": {\r\n            \"accountType\": \"Ahorros\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/cuentas/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"cuentas",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"${{$randomUUID}}\",\r\n    \"origin\": \"Postam\",\r\n    \"payload\": \"47875360192d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/cuentas/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"cuentas",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transaction",
+			"item": [
+				{
+					"name": "withdraw value-1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"${{$randomUUID}}\",\r\n    \"origin\": \"Postamn\",\r\n    \"payload\": {\r\n        \"accountNumber\": \"478758\",\r\n        \"value\": 575,\r\n        \"movementType\": \"WITHDRAW\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deposit value-1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"${{$randomUUID}}\",\r\n    \"origin\": \"Postamn\",\r\n    \"payload\": {\r\n        \"accountNumber\": \"225487\",\r\n        \"value\": 600,\r\n        \"movementType\": \"DEPOSIT\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deposit value-2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"${{$randomUUID}}\",\r\n    \"origin\": \"Postamn\",\r\n    \"payload\": {\r\n        \"accountNumber\": \"495878\",\r\n        \"value\": 150,\r\n        \"movementType\": \"DEPOSIT\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "withdraw value-2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"${{$randomUUID}}\",\r\n    \"origin\": \"Postamn\",\r\n    \"payload\": {\r\n        \"accountNumber\": \"496825\",\r\n        \"value\": 540,\r\n        \"movementType\": \"WITHDRAW\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "report",
+			"item": [
+				{
+					"name": "generateReport",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/reportes?cliente=1234567812&dateFrom=2024-09-26&dateTo=2024-09-26",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"reportes"
+							],
+							"query": [
+								{
+									"key": "cliente",
+									"value": "1234567812",
+									"description": "numero de identificacion del cliente"
+								},
+								{
+									"key": "dateFrom",
+									"value": "2024-09-26",
+									"description": "rango fecha inicio de los movimientos"
+								},
+								{
+									"key": "dateTo",
+									"value": "2024-09-26",
+									"description": "rango fecha fin de los movimientos"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
