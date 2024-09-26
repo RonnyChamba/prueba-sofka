@@ -1,4 +1,4 @@
-1)  Generar el .jar de la dependencia ms-core-dependency, ya que es requerida para los micro ms-core-persona y ms-core-transaction
+1)  Generar el .jar de la dependencia ms-core-dependency, ya que esta es requerida para los micro ms-core-persona y ms-core-transaction
 
 
 2) Crear red, se utilizara para comunicar los servicios, ejecutar:
